@@ -88,6 +88,13 @@ namespace NzbDrone.Core.Configuration
             set { SetValue("LogIndexerResponse", value); }
         }
 
+        public string IndexerCooldownPeriods
+        {
+            get { return GetValue("IndexerCooldownPeriods", string.Empty); }
+
+            set { SetValue("IndexerCooldownPeriods", value); }
+        }
+
         public int FirstDayOfWeek
         {
             get { return GetValueInt("FirstDayOfWeek", (int)CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek); }
