@@ -39,7 +39,7 @@ back — but as of this base version, nothing does.
 
 | Tag | Points at | Use for |
 |---|---|---|
-| `2.3.7.5365-krzw.1` | a tagged release (immutable) | **production — pin to this** |
+| `2.5.0.5422-krzw.1` | a tagged release (immutable) | **production — pin to this** |
 | `latest` | tip of `personal/all-features-master` | bleeding edge |
 | `personal-all-features-master` | same branch (ref tag) | bleeding edge |
 | `sha-<short>` | a specific commit | debugging / rollback |
@@ -56,7 +56,7 @@ docker run -d --name prowlarr \
   -p 9696:9696 \
   -e PUID=1000 -e PGID=1000 -e TZ=Europe/Paris -e UMASK=002 \
   -v /path/to/config:/config \
-  ghcr.io/krz-w/prowlarr:2.3.7.5365-krzw.1
+  ghcr.io/krz-w/prowlarr:2.5.0.5422-krzw.1
 ```
 
 ### docker-compose
@@ -64,7 +64,7 @@ docker run -d --name prowlarr \
 ```yaml
 services:
   prowlarr:
-    image: ghcr.io/krz-w/prowlarr:2.3.7.5365-krzw.1
+    image: ghcr.io/krz-w/prowlarr:2.5.0.5422-krzw.1
     container_name: prowlarr
     environment:
       - PUID=1000

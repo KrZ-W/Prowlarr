@@ -11,7 +11,7 @@ How to cut a versioned release of the KrZ-W/Prowlarr fork. See
 
 ```
 git tag / GitHub release :  v<upstream-version>+krzw.<N>     e.g. v2.3.7.5365+krzw.1
-docker image tag         :  <upstream-version>-krzw.<N>      e.g. 2.3.7.5365-krzw.1
+docker image tag         :  <upstream-version>-krzw.<N>      e.g. 2.5.0.5422-krzw.1
 ```
 
 - `<upstream-version>` = the Prowlarr version `personal/all-features-master` is rebased
@@ -51,7 +51,7 @@ docker image tag         :  <upstream-version>-krzw.<N>      e.g. 2.3.7.5365-krz
    ```
 
    This triggers `docker-release.yml`, which builds and pushes the immutable image tag
-   `ghcr.io/krz-w/prowlarr:2.3.7.5365-krzw.1` (it maps `+` → `-` automatically).
+   `ghcr.io/krz-w/prowlarr:2.5.0.5422-krzw.1` (it maps `+` → `-` automatically).
 
 5. **Create the GitHub release** from the tag, using the changelog section as the body:
 
