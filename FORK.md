@@ -10,10 +10,10 @@ doesn't carry the language/custom-format features of the sibling
 [Radarr](https://github.com/KrZ-W/Radarr) and [Sonarr](https://github.com/KrZ-W/Sonarr)
 forks.
 
-- **Upstream base:** Prowlarr `2.3.7.5365`
+- **Upstream base:** Prowlarr `2.5.0.5422`
 - **Primary branch:** `personal/all-features-master`
 - **Container image:** `ghcr.io/krz-w/prowlarr`
-- **Current fork version:** `v2.3.7.5365+krzw.1`
+- **Current fork version:** `v2.5.0.5422+krzw.1`
 
 > The stock upstream `README.md` is preserved below this fork section. Everything
 > KrZ-W-specific lives in [`docs/`](docs/) and [`CHANGELOG.md`](CHANGELOG.md).
@@ -42,7 +42,7 @@ tags, so the Docker tag replaces `+` with `-`:
 
 ```
 git tag      v2.3.7.5365+krzw.1
-docker image ghcr.io/krz-w/prowlarr:2.3.7.5365-krzw.1
+docker image ghcr.io/krz-w/prowlarr:2.5.0.5422-krzw.1
 ```
 
 See [docs/releasing.md](docs/releasing.md) for how to cut a release.
@@ -55,7 +55,7 @@ See [docs/releasing.md](docs/releasing.md) for how to cut a release.
 
 ```bash
 # Pinned to a release (recommended for stability)
-docker pull ghcr.io/krz-w/prowlarr:2.3.7.5365-krzw.1
+docker pull ghcr.io/krz-w/prowlarr:2.5.0.5422-krzw.1
 
 # Bleeding edge — tip of personal/all-features-master
 docker pull ghcr.io/krz-w/prowlarr:latest
