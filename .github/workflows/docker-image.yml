@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - personal/**
-      - feature/**
-      - fix/**
     paths:
       - 'src/**'
       - 'frontend/**'

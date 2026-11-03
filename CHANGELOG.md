@@ -10,7 +10,10 @@ and this fork's versioning is described in [FORK.md](FORK.md#versioning):
 
 ## [Unreleased]
 
-_Nothing yet._
+### Changed
+
+- CI: `docker-image.yml` builds only `personal/**`; topic-branch pushes no longer publish
+  `:<branch>` / `sha-` images (use *Run workflow* on a branch when one is needed).
 
 ## [v2.7.0.5723+krzw.1] — based on Prowlarr 2.7.0.5723
 

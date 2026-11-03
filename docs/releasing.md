@@ -76,5 +76,5 @@ docker image tag         :  <upstream-version>-krzw.<N>      e.g. 2.7.0.5723-krz
 
 | Workflow | Trigger | Produces |
 |---|---|---|
-| `docker-image.yml` | push to `personal/**`, `feature/**`, `fix/**` | `:latest` (primary branch), `:<branch>`, `:sha-<short>` |
+| `docker-image.yml` | push to `personal/**` (the aggregate; topic branches build nothing, use *Run workflow* on one if an image is needed) | `:latest` (primary branch), `:<branch>`, `:sha-<short>` |
 | `docker-release.yml` | push of a `v*` tag | `:<upstream-version>-krzw.<N>` (immutable release image) |
