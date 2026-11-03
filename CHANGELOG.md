@@ -22,6 +22,9 @@ all fork features carry forward unchanged.
 
 - Rebased onto upstream Prowlarr **2.7.0.5723** (from 2.5.0.5422). No fork feature behavior
   changed.
+- Image: the frontend build stage moves from `node:20.11.1` to `node:20.19.5` (upstream's
+  lockfile now requires node 20.19+; the first build of this tag failed on it, no image was
+  published, the tag was moved).
 - Repository housekeeping: `personal/all-features-master` is the default branch, the merged
   `feature/configurable-indexer-cooldown` branch is archived as
   `archive/feature/configurable-indexer-cooldown`, and the inherited upstream workflows are
