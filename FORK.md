@@ -10,10 +10,10 @@ doesn't carry the language/custom-format features of the sibling
 [Radarr](https://github.com/KrZ-W/Radarr) and [Sonarr](https://github.com/KrZ-W/Sonarr)
 forks.
 
-- **Upstream base:** Prowlarr `2.5.0.5422`
+- **Upstream base:** Prowlarr `2.7.0.5723`
 - **Primary branch:** `personal/all-features-master`
 - **Container image:** `ghcr.io/krz-w/prowlarr`
-- **Current fork version:** `v2.5.0.5422+krzw.1`
+- **Current fork version:** `v2.7.0.5723+krzw.1`
 
 > The stock upstream `README.md` is preserved below this fork section. Everything
 > KrZ-W-specific lives in [`docs/`](docs/) and [`CHANGELOG.md`](CHANGELOG.md).
@@ -42,7 +42,7 @@ tags, so the Docker tag replaces `+` with `-`:
 
 ```
 git tag      v2.3.7.5365+krzw.1
-docker image ghcr.io/krz-w/prowlarr:2.5.0.5422-krzw.1
+docker image ghcr.io/krz-w/prowlarr:2.7.0.5723-krzw.1
 ```
 
 See [docs/releasing.md](docs/releasing.md) for how to cut a release.
@@ -55,7 +55,7 @@ See [docs/releasing.md](docs/releasing.md) for how to cut a release.
 
 ```bash
 # Pinned to a release (recommended for stability)
-docker pull ghcr.io/krz-w/prowlarr:2.5.0.5422-krzw.1
+docker pull ghcr.io/krz-w/prowlarr:2.7.0.5723-krzw.1
 
 # Bleeding edge — tip of personal/all-features-master
 docker pull ghcr.io/krz-w/prowlarr:latest
@@ -66,7 +66,10 @@ See [features/docker-deployment.md](docs/features/docker-deployment.md) for a fu
 
 ## Relationship to upstream
 
-- `upstream` remote → `Prowlarr/Prowlarr` (the real project)
-- `origin` remote → `KrZ-W/Prowlarr` (this fork)
-- Each feature lives on its own `feature/*` branch and is merged into
-  `personal/all-features-master`. See [CHANGELOG.md](CHANGELOG.md) for per-feature history.
+- `origin` remote → `KrZ-W/Prowlarr` (this fork). Upstream release tags are fetched by
+  URL when needed (`git fetch https://github.com/Prowlarr/Prowlarr.git tag v2.7.0.5723`).
+- Each feature or fix is built on a short-lived `feature/*` or `fix/*` topic branch cut from
+  the current `personal/all-features-master` tip, merged back with `--no-ff`, and then
+  renamed to `archive/<name>`. Archived branches are history only; the aggregate is what
+  is rebased onto newer upstream releases. See [CHANGELOG.md](CHANGELOG.md) for
+  per-feature history.
