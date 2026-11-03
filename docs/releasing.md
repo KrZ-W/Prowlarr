@@ -37,7 +37,7 @@ docker image tag         :  <upstream-version>-krzw.<N>      e.g. 2.7.0.5723-krz
 3. **Commit** the changelog (and any doc updates):
 
    ```bash
-   git commit -am "docs: release v2.3.7.5365+krzw.1"
+   git commit -am "docs: release v2.7.0.5723+krzw.1"
    git push origin personal/all-features-master
    ```
 
@@ -54,10 +54,10 @@ docker image tag         :  <upstream-version>-krzw.<N>      e.g. 2.7.0.5723-krz
 5. **Create the GitHub release** from the tag, using the changelog section as the body:
 
    ```bash
-   gh release create 'v2.3.7.5365+krzw.1' \
+   gh release create 'v2.7.0.5723+krzw.1' \
      --repo KrZ-W/Prowlarr \
-     --title 'v2.3.7.5365+krzw.1' \
-     --notes-file <(sed -n '/## \[v2.3.7.5365+krzw.1\]/,/## \[/p' CHANGELOG.md | sed '$d')
+     --title 'v2.7.0.5723+krzw.1' \
+     --notes-file <(sed -n '/## \[v2.7.0.5723+krzw.1\]/,/## \[/p' CHANGELOG.md | sed '$d')
    ```
 
 ## After rebasing onto a newer upstream
